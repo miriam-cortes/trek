@@ -5,22 +5,50 @@
   <head>
     <meta charset="utf-8">
     <title>Come With Meeeee(dium)</title>
+    <link rel="stylesheet" href="foundation.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   </head>
   <body>
-    <button id="load">GO!</button>
-    <button id="all">See all!</button>
+    <!-- <button id="load" class="button">GO</button> -->
+    <button id="all" class="button large-2 column">See all</button>
 
-    <div id="profile">
+    <!-- <div id="modal-launcher"> -->
 
-    </div>
+      <!-- <a href="#" id="modal-launcher">Launcher</a> -->
 
-    <div id="trips"></div>
+      <div id="modal-background"></div>
+
+      <div id="modal-content">
+        <h2 id="name"></h2>
+        <h3 id="continent"></h3>
+        <p id="category"></p>
+        <p id="destination"></p>
+        <h3 id="weeks"></h3>
+        <p id="cost"></p>
+        <p id="tripid"></p>
+        <p id="about"></p>
+
+        <button id="modal-close" class="button">Close</button>
+      </div>
+
+    <!-- </div> -->
+
+    <table id="modal-launcher" class="row table">
+      <th>Please travel with Meeeee(dium)</th>
+      <tr id="trips" class="large-12 columns">
+      </tr>
+    </table>
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
+
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="scripts.js"></script>
+
   </body>
 </html>
