@@ -2,6 +2,9 @@ body{
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
+th {
+  font-size: 2em;
+}
 .table {
   text-decoration-color: white;
 }

@@ -5,17 +5,17 @@ $(document).ready(function() {
 
   $('form').submit(function(e) {
     e.preventDefault();
+    //set theTripsID to be the value from the attribute in the form
     var theTripsID = $('#theTripsID').attr('value')
 
     var url = "https://trektravel.herokuapp.com/trips/" + theTripsID + "/reserve";
     var formData = $(this).serialize();
-    console.log("theTripsID: " + theTripsID);
+    // console.log("theTripsID: " + theTripsID);
 
     $.post(url,formData,function(response) {
       $('#modal-content').hide()
       $('#message').html('<p> Your spot has been reserved! </p>');
-
-      console.log(theTripsID);
+      // console.log(theTripsID);
     })
   })
 
@@ -45,8 +45,8 @@ $(document).ready(function() {
     var tripUrl = $(this).attr('href')
 
     $.get(tripUrl, function(trip){
-      // this should make the modal pop up
-      console.log(trip);
+      // this makes the modal pop up
+      // console.log(trip);
       $('#name').text(trip.name)
       $('#destination').text("Destination: " + trip.destination);
       $('#continent').text("Continent: " + trip.continent)
@@ -55,8 +55,10 @@ $(document).ready(function() {
       $('#cost').text("$" + trip.cost);
       $('#tripid').text("Trip id: " + trip.id);
       $('#about').text(trip.about);
+      //this sets theTripsID the same as the value in the hidden form, which is the trip.id
       $('#theTripsID').attr('value',trip.id);
-      console.log($('#theTripsID').attr('value'));
+      // console.log($('#theTripsID').attr('value'));
+
       // modal close button
       $("#modal-content").toggleClass("active");
       $("#modal-close").click(function() {
@@ -65,7 +67,7 @@ $(document).ready(function() {
 
     // give me responses no matter what happens...
     }).always(function() {
-      $('message').text("something happened.");
+      // $('message').text("something happened.");
       console.log("something happened.");
     }).fail(function() {
       alert("this failed")
