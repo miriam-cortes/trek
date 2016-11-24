@@ -11,10 +11,9 @@
   </head>
   <body>
     <!-- <button id="load" class="button">GO</button> -->
-    <button id="all" class="button large-2 column">See all</button>
+    <button id="all" class="button large-2 column">See all possible trips</button>
 
     <!-- <div id="modal-launcher"> -->
-
       <!-- <a href="#" id="modal-launcher">Launcher</a> -->
 
       <div id="modal-background"></div>
@@ -29,7 +28,30 @@
         <p id="tripid"></p>
         <p id="about"></p>
 
-        <button id="modal-close" class="button">Close</button>
+        <form method="POST">
+          <div id="the-form"></div>
+          <section>
+            <label>Name</label>
+            <input type="text" id="customer_name" name="name"></input>
+          </section>
+          <section>
+            <label>Age</label>
+            <input type="text" id="age" name="age"></input>
+          </section>
+          <section>
+            <label>Email</label>
+            <input type="text" id="email" name="email"></input>
+          </section>
+          <input type="hidden" id="theTripsID" name="theTripsID"></input>
+
+          <section>
+            <button class="large-2 columns button"type="reserve" id="reserveSpot">Reserve</button>
+            <div id="message"></div>
+          </section>
+
+        </form>
+
+        <button id="modal-close" class="button large-2 columns">Close</button>
       </div>
 
     <!-- </div> -->
@@ -39,8 +61,6 @@
       <tr id="trips" class="large-12 columns">
       </tr>
     </table>
-
-
 
 
 
