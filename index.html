@@ -14,7 +14,6 @@
     <button id="all" class="button large-2 column">See all</button>
 
     <!-- <div id="modal-launcher"> -->
-
       <!-- <a href="#" id="modal-launcher">Launcher</a> -->
 
       <div id="modal-background"></div>
@@ -29,18 +28,38 @@
         <p id="tripid"></p>
         <p id="about"></p>
 
+        <form method="POST">
+          <div id="the-form"></div>
+          <section>
+            <label>Name</label>
+            <input type="text" id="customer_name" name="name"></input>
+          </section>
+          <section>
+            <label>Age</label>
+            <input type="text" id="age" name="age"></input>
+          </section>
+          <section>
+            <label>Email</label>
+            <input type="text" id="email" name="email"></input>
+          </section>
+          <input type="hidden" id="theTripsID" name="theTripsID"></input>
+
+          <section class="button">
+            <button type="reserve" id="reserveSpot">Reserve</button>
+          </section>
+
+        </form>
+
         <button id="modal-close" class="button">Close</button>
       </div>
 
     <!-- </div> -->
-
+    <div id="message"></div>
     <table id="modal-launcher" class="row table">
       <th>Please travel with Meeeee(dium)</th>
       <tr id="trips" class="large-12 columns">
       </tr>
     </table>
-
-
 
 
 
