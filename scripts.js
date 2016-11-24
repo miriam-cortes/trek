@@ -13,8 +13,9 @@ $(document).ready(function() {
     // console.log("theTripsID: " + theTripsID);
 
     $.post(url,formData,function(response) {
-      $('#modal-content').hide()
+      // $('#modal-content').hide()
       $('#message').html('<p> Your spot has been reserved! </p>');
+      $('#message').show()
       // console.log(theTripsID);
     })
   })
@@ -40,7 +41,7 @@ $(document).ready(function() {
   //clicking on individual trips
   $('#trips').on('click', 'a',function(e) {
     e.preventDefault(); //console.log("I'm preventing the default");
-
+    $('#message').hide()
     $('#modal-content').show(); //the pop-up window
     var tripUrl = $(this).attr('href')
 
